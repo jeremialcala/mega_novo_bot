@@ -15,7 +15,11 @@ from flask import render_template
 from flask import send_file
 from elibom.Client import *
 from random import randint
+import sys
 
+
+reload(sys)
+sys.setdefaultencoding("utf-8")
 app = Flask(__name__)
 
 elibom = ElibomClient('info@novopayment.com', 'X0fAbv3Uu6')
