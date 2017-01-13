@@ -828,12 +828,8 @@ def send_message(recipient_id, message_text):
 
 
 def log(message):  # simple wrapper for logging to stdout on heroku
-    print str(change_text(message))
+    print str(message)
     sys.stdout.flush()
-
-
-def change_text(text):
-    return text.encode('utf-8')
 
 
 def json_loads_byteified(json_text):
