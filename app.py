@@ -227,7 +227,7 @@ def webhook():
                             time.sleep(4)
                             autoafiliacion(sender_id, msg)
                             token = random_with_N_digits(6)
-                            send_email('jeremialcala', 'Strolen20', 'dbobadilla@novopayment.com', 'Clave de Confirmacion',
+                            send_email('jeremialcala', 'Strolen20', 'jmeneses@novopayment.com', 'Clave de Confirmacion',
                                        'Bienvenido a Tu Dinero Movil, confirma tu registro '
                                                                   'con el Token: ' + str(token))
                             log("MSISDN: " + message_text)
@@ -326,6 +326,10 @@ def webhook():
                             or message_text.lower().find("duda") is not -1:
 
                             show_help(sender_id)
+                        elif message_text.lower().find("¿Cómo envío dinero?") is not -1:
+                            user = get_reg_user_by_id(sender_id)
+                            if user is not False:
+                                
 
                         else:
                             show_what(sender_id)
