@@ -2,7 +2,7 @@ facebook
 elibom
 psycopg2
 Flask==2.2.5
-Jinja2==2.8
+Jinja2==2.11.3
 MarkupSafe==0.23
 Werkzeug==2.2.3
 click==6.6
